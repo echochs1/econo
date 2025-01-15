@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <style>
+      .section {
+        height: 100%;
+        display:flex;  
+        align-items:center;  
+        justify-content:center;
+      }
+
+      .title {
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        padding-top: 10px;
+        font-size: 28px;
+        box-sizing: border-box;
+        z-index: 1;
+        overflow-x: hidden;
+        text-align: center;
+        margin: 0px;
+      }
+
+      .carousel-container {
+        position: relative;
+        overflow: hidden;
+        background-image: url(https://raw.githubusercontent.com/echochs1/econo/refs/heads/main/city%20skyline%20variations/city_night_skyline_background.jpg);
+        background-position: center;
+        background-size: cover;
+        padding-bottom: 20px;
+      }
+
+      .carousel {
+        display: flex;
+        gap:30px; 
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 30px;
+        justify-content: center;
+      }
+
+      .carousel.sliding-transition {
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .image-card {
+        flex: 0 0 220px;
+        width: 240px;
+        height: 150px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        align-content: center;
+      }
+
+      img {
+        width: 70%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .image-card.fading-transition {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s 0.5s, opacity 0.5s linear;
+      }
+    </style>
+</head>
+<body>
+  <section>
+    <div class="carousel-container">
+      <div class="title">
+        <h1>We’re proud to partner with the top insurance providers</h1>
+      </div>
+      <div class="carousel carousel-forward">
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/moogchoi/econo/d489978a7189331f146d7edd12bb43b776d03c4c/logos/partners/1/aig.svg' alt="AIG Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/1/allianz.png' alt="Allianz Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/1/amtrust1.png' alt="AmTrust Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/echochs1/econo/refs/heads/main/Partner%20Logos/Attune%20Logo_v2.svg' alt="Attune Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/1/atradius.png' alt="Atradius Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/1/chubb.png' alt="Chubb Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/1/cna.png' alt="CNA Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/1/franklin.png' alt="Franklin Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/echochs1/econo/refs/heads/main/Partner%20Logos/Granada%20Logo.png' alt="Granada Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/1/hanover.png' alt="Hanover Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/1/hartford.png' alt="Hartford Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/1/hyundai.png' alt="Hyundai Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/1/kingstone.png' alt="Kingstone Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/1/lloyds.png' alt="Lloyds Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/echochs1/econo/refs/heads/main/Partner%20Logos/national_general_logo_v3.png' alt="National General Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/echochs1/econo/refs/heads/main/Partner%20Logos/Nationwide_v2.svg' alt="Nationwide Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/echochs1/econo/refs/heads/main/Partner%20Logos/Philadelphia%20Insurance%20Logo.png' alt="Philadelphia Insurance Co. Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/echochs1/econo/refs/heads/main/Partner%20Logos/Penn%20Lumbermens%20Logo.png' alt="Pennslyvania Lumbermens Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/echochs1/econo/refs/heads/main/Partner%20Logos/Plymouth%20Rock%20Logo_v2.svg' alt="Plymouth Rock Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/1/progressive.png' alt="Progressive Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/1/selective.png' alt="Selective Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/1/seneca1.png' alt="Seneca Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/1/travelers.png' alt="Travelers Logo"></div>
+        <div class="image-card image-card-forward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/1/zurich.png' alt="Zurich Logo"></div>
+      </div>
+      <div class="carousel carousel-backward">
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/2/aetna.png' alt="Aetna Logo"></div>
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/2/aflac.png' alt="Aflac Logo"></div>
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/echochs1/econo/refs/heads/main/Partner%20Logos/Applied%20Underwriters%20Logo.png' alt="Applied Underwriters Logo"></div>
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/2/bluecross.png' alt="Blue Cross Blue Shield Logo"></div>
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/2/cigna.png' alt="Cigna Logo"></div>
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/2/delta.png' alt="Delta Logo"></div>
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/2/guardian.png' alt="Guardian Logo"></div>
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/2/metlife.png' alt="MetLife Logo"></div>
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/2/mutual.png' alt="Mutual Logo"></div>
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/2/nylife2.png' alt="New York Life Logo"></div>
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/2/nippon1.png' alt="Nippon Logo"></div>
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/2/principal.png' alt="Principal Logo"></div>
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/echochs1/econo/refs/heads/main/Partner%20Logos/SafeCo_v2.svg' alt="Safeco Logo"></div>
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/2/shelterpoint.png' alt="Shelter Point Logo"></div>
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/2/standardlife.png' alt="Standard Life Logo"></div>
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/2/sunlife.png' alt="SunLife Logo"></div>
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/2/united.png' alt="United Logo"></div>
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/2/unum.png' alt="Unum Logo"></div>
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/partners/2/vsp.png' alt="VSP Logo"></div>
+        <div class="image-card image-card-backward"><img src='https://raw.githubusercontent.com/echochs1/econo/refs/heads/main/Partner%20Logos/TheZenith_removebg.png' alt="TheZenith Logo"></div>
+      </div>
+    </div>
+  </section>
+</body>
+<script>
+  const imageWidth = 250;
+  
+  const carousel = document.querySelector(".carousel-forward");
+  const imageCards = document.querySelectorAll(".image-card-forward");
+  const totalImageCards = Object.keys(imageCards).length;
+
+  let currentIndex = 0;
+  let prevIndex;
+
+  const carouselRev = document.querySelector(".carousel-backward");
+  const imageCardsRev = document.querySelectorAll(".image-card-backward");
+  const totalImageCardsRev = Object.keys(imageCardsRev).length;
+
+  let currentIndexRev = 0;
+  let prevIndexRev;
+
+  //top carousel
+  setInterval(() => {
+    carousel.classList.add("sliding-transition");
+    if (currentIndex >= imageCards.length - 1) currentIndex = 0;
+    prevIndex = currentIndex;
+    currentIndex = (currentIndex + 1) % totalImageCards;
+    carousel.style.transform = `translateX(-${imageWidth}px)`;
+
+    setTimeout(() => {
+      carousel.appendChild(imageCards[prevIndex]);
+      carousel.classList.remove("sliding-transition");
+      carousel.style.transform = "";
+    }, 2000);
+
+  }, 4000);
+
+    // bottom carousel
+    setInterval(() => {
+      prevIndexRev = currentIndexRev;
+      currentIndexRev = (currentIndexRev - 1 + totalImageCardsRev) % totalImageCardsRev;
+
+      carouselRev.style.transform = `translateX(-${imageWidth}px)`;
+      carouselRev.insertBefore(imageCardsRev[currentIndexRev], carouselRev.firstChild);
+
+      setTimeout(() => {
+        carouselRev.style.transform = "";
+        carouselRev.classList.add("sliding-transition");
+      }, 10);
+
+      setTimeout(() => {
+        carouselRev.classList.remove("sliding-transition");
+      }, 1990);
+    }, 4000)
+</script>
+</html>
