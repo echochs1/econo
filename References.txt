@@ -1,0 +1,2 @@
+Infinity Carousel Code References
+- https://dev.to/arindam1997007/creating-an-infinite-looping-image-carousel-with-css-and-javascript-4pao
