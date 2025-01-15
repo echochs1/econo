@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Section 3: Home Page Clients */
+    .clients-section {
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 12px;
+    }
+
+    .clients-section h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #2c3e50;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .clients-section h1 {
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 30px;
+      color: #34495e;
+    }
+
+    .clients-section .carousel-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .clients-section .clients-logos {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+
+    .clients-section .carousel-track {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .clients-section .clients-logos img {
+      width: 150px;
+      height: auto;
+      object-fit: contain;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .clients-section .carousel-track li {
+      flex: 0 0 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 5px;
+      height: 150px;
+    }
+
+    .clients-section .clients-logos img:hover {
+      filter: grayscale(0%);
+      transform: scale(1.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .carousel-btn {
+      margin-top: 35px;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 18px;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .carousel-btn--left {
+      left: 10px;
+    }
+
+    .carousel-btn--right {
+      right: 10px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .clients-section h2 {
+        font-size: 28px;
+      }
+
+      .clients-section h1 {
+        font-size: 18px;
+      }
+
+      .clients-section .logos-grid img {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Section 3: Clients -->
+  <section class="clients-section">
+    <!-- First Carousel Row -->
+    <div class="carousel-wrapper">
+      <button class="carousel-btn carousel-btn--left" id="prevBtn3">‹</button>
+      <div class="clients-logos">
+        <div class="carousel-container">
+          <ul class="carousel-track" id="carouselTrack3">
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/accessbio.png'
+                alt="Access Bio"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/1.png'
+                alt="Bank of Korea"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/celltrion.png'
+                alt="Celltrion"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2.png'
+                alt="Financial Supervisory"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/3.png' alt="Fursys">
+            </li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/4.png' alt="GMB">
+            </li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/5.png' alt="Hiossen">
+            </li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/6.png' alt="Hyundai">
+            </li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/7.png' alt="IBK">
+            </li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/8.png' alt="ICHNP">
+            </li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/9.png' alt="KITA">
+            </li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/10.png'
+                alt="KoreanRE"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/12.png' alt="Kotra">
+            </li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/13.png' alt="KSure">
+            </li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/kto.png' alt="KTO">
+            </li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/14.png' alt="Kyobo">
+            </li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/15.png' alt="Mirae">
+            </li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/11.png' alt="Posco">
+            </li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/samyang.png'
+                alt="Samyang"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/16.png'
+                alt="SK Life Science"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/solum.png'
+                alt="solum"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/vatech.png'
+                alt="vatech"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/woori.png'
+                alt="woori"></li>
+          </ul>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-btn--right" id="nextBtn3">›</button>
+    </div>
+
+    <div class="carousel-wrapper">
+      <button class="carousel-btn carousel-btn--left" id="prevBtn4">‹</button>
+      <div class="clients-logos">
+        <div class="carousel-container">
+          <ul class="carousel-track" id="carouselTrack4">
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/agrofish.png'
+                alt="Agrofish"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/csrenewables.png'
+                alt="CS Renewables"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/dashingdiva.png'
+                alt="Dashing Diva"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/ecopro.jpg'
+                alt="Eco Pro"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/export.png'
+                alt="Export"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/hitrons.png'
+                alt="Hitrons"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/kb.png' alt="KB">
+            </li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/kdb.png' alt="KDB">
+            </li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/keb.png' alt="KEB">
+            </li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/khf.jpg' alt="KHF">
+            </li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/kic.jpg' alt="KIC">
+            </li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/kiswire.jpg'
+                alt="kiswire"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/kocham.png'
+                alt="kocham"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/massdesign.png'
+                alt="mass design"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/maxlite.png'
+                alt="maxlite"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/myvet.png'
+                alt="myvet"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/nonghyup.png'
+                alt="nonghyup"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/nps.jpg' alt="nps">
+            </li>
+            <li><img
+                src='https://raw.githubusercontent.com/moogchoi/econo/f9c89255c24a0f425bcb7653a3395a991c0ce2d8/logos/2/posid.svg'
+                alt="posid"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/qpix.jfif'
+                alt="Qpix"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/sempio.png'
+                alt="sempio"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/shinhan.png'
+                alt="shinhan"></li>
+            <li><img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/sojo.png'
+                alt="sojo"></li>
+          </ul>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-btn--right" id="nextBtn4">›</button>
+    </div>
+  </section>
+
+  <script>
+    // 1st row script
+    const carouselTrack3 = document.getElementById('carouselTrack3');
+    let currentSlide3 = 0;
+    const totalSlides3 = carouselTrack3.children.length;
+
+    document.getElementById('nextBtn3').addEventListener('click', () => {
+      if (currentSlide3 < totalSlides3 - 1) {
+        currentSlide3++;
+      } else {
+        currentSlide3 = 0;
+      }
+      carouselTrack3.style.transform = `translateX(-${currentSlide3 * 160}px)`;
+    });
+
+    document.getElementById('prevBtn3').addEventListener('click', () => {
+      if (currentSlide3 > 0) {
+        currentSlide3--;
+      } else {
+        currentSlide3 = totalSlides3 - 1;
+      }
+      carouselTrack3.style.transform = `translateX(-${currentSlide3 * 160}px)`;
+    });
+
+    setInterval(() => {
+      document.getElementById('nextBtn3').click();
+    }, 3000);
+
+    // 2nd row script
+    const carouselTrack4 = document.getElementById('carouselTrack4');
+    let currentSlide4 = 0;
+    const totalSlides4 = carouselTrack4.children.length;
+
+    document.getElementById('nextBtn4').addEventListener('click', () => {
+      if (currentSlide4 < totalSlides4 - 1) {
+        currentSlide4++;
+      } else {
+        currentSlide4 = 0;
+      }
+      carouselTrack4.style.transform = `translateX(-${currentSlide4 * 160}px)`;
+    });
+
+    document.getElementById('prevBtn4').addEventListener('click', () => {
+      if (currentSlide4 > 0) {
+        currentSlide4--;
+      } else {
+        currentSlide4 = totalSlides4 - 1;
+      }
+      carouselTrack4.style.transform = `translateX(-${currentSlide4 * 160}px)`;
+    });
+
+    setInterval(() => {
+      document.getElementById('prevBtn4').click();
+    }, 3000);
+  </script>
+
+
+</body>
+
+</html>
