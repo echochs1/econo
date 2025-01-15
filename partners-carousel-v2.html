@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .section {
+        height: 100%;
+        display:flex;  
+        align-items:center;  
+        justify-content:center;
+      }
+
+      .carousel-container {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .carousel {
+        /* display: flex; */
+        /* width: 100%; */
+        /* height: auto; */
+        /* gap: 20px; */
+        /* align-items: center; */
+        /* justify-content: center; */
+        /* box-sizing: border-box; */
+        /* overflow: hidden; */
+        display: flex;
+        max-width:1000px;
+        gap:20px; 
+      }
+
+      /* .carousel-reverse { */
+        /* display: flex; */
+        /* width: 100%; */
+        /* gap: 20px; */
+        /* align-items: center; */
+        /* justify-content: center; */
+        /* overflow: clip; */
+      /* } */
+
+      .carousel.sliding-transition {
+        transition: transform 0.5s ease-in-out;
+      }
+      /* .carousel-reverse.sliding-transition {
+        transition: transform 0.5s ease-in-out;
+      } */
+
+      img {
+        width: 200px;
+        object-fit: contain;
+      }
+    </style>
+</head>
+<body>
+  <section>
+    <div class="carousel-container">
+      <div class="carousel">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/accessbio.png' alt="Access Bio" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/1.png' alt="Bank of Korea" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/celltrion.png' alt="Celltrion" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2.png' alt="Financial Supervisory" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/3.png' alt="Fursys" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/4.png' alt="GMB" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/5.png' alt="Hiossen" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/6.png' alt="Hyundai" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/7.png' alt="IBK" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/8.png' alt="ICHNP" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/9.png' alt="KITA" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/10.png' alt="KoreanRE" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/12.png' alt="Kotra" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/13.png' alt="KSure" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/kto.png' alt="KTO" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/14.png' alt="Kyobo" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/15.png' alt="Mirae" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/11.png' alt="Posco" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/samyang.png'alt="Samyang" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/16.png'alt="SK Life Science" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/solum.png'alt="solum" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/vatech.png'alt="vatech" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/woori.png'alt="woori" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/echochs1/econo/refs/heads/main/Client%20Logos/Korea_Creative_Content_Agency_Hangul_logo.png'alt="temp KOCCA" class="carousel-image">
+      </div>
+      <!-- <button class="arrow-button left-arrow"><span>&#8249;</span></button>
+      <button class="arrow-button right-arrow"><span>&#8250;</span></button> -->
+    </div>
+  </section>
+</body>
+<script>
+  const imageWidth = 220;
+  
+  const carousel = document.querySelector(".carousel");
+  const images = document.querySelectorAll(".carousel-image");
+  const totalImages = Object.keys(images).length;
+
+  let currentIndex = 0;
+  let prevIndex;
+
+  const carouselRev = document.querySelector(".carousel-reverse");
+  const imagesRev = document.querySelectorAll(".carousel-image-reverse");
+  const totalImagesRev = Object.keys(imagesRev).length;
+
+  const rightArrow = document.querySelector(".right-arrow");
+  const leftArrow = document.querySelector(".left-arrow");
+
+  let currentIndexRev = 0;
+  let prevIndexRev;
+
+  //   rightArrow.addEventListener("click", () => {
+  //   carousel.classList.add("sliding-transition");
+
+  //   prevIndex = currentIndex;
+  //   currentIndex = (currentIndex + 1) % totalImages;
+
+  //   carousel.style.transform = `translateX(-${imageWidth}px)`;
+
+  //   setTimeout(() => {
+  //     carousel.appendChild(images[prevIndex]);
+  //     carousel.classList.remove("sliding-transition");
+  //     carousel.style.transform = "";
+  //   }, 500);
+  // });
+
+  setInterval(() => {
+    //top carousel
+    carousel.classList.add("sliding-transition");
+    prevIndex = currentIndex;
+    currentIndex = (currentIndex + 1) % totalImages;
+    carousel.style.transform = `translateX(-${imageWidth}px)`;
+
+    setTimeout(() => {
+      carousel.appendChild(images[prevIndex]);
+      carousel.classList.remove("sliding-transition");
+      carousel.style.transform = "";
+    }, 1500);
+    }, 3000);
+
+  //   //bottom carousel
+  //   // prevIndexRev = currentIndexRev;
+  //   // currentIndexRev = (currentIndexRev - 1 + totalImagesRev) % totalImagesRev;
+
+  //   // carouselRev.style.transform = `translateX(-${imageWidth}px)`;
+  //   // carouselRev.insertBefore(imagesRev[currentIndexRev], carouselRev.firstChild);
+
+  //   // setTimeout(() => {
+  //   //   carouselRev.style.transform = "";
+  //   //   carouselRev.classList.add("sliding-transition");
+  //   // }, 10);
+
+  //   // setTimeout(() => {
+  //   //   carouselRev.classList.remove("sliding-transition");
+  //   // }, 1490);
+  // }, 3000)
+</script>
+</html>
+
+
+<!-- <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/accessbio.png' alt="Access Bio" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/1.png' alt="Bank of Korea" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/celltrion.png' alt="Celltrion" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2.png' alt="Financial Supervisory" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/3.png' alt="Fursys" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/4.png' alt="GMB" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/5.png' alt="Hiossen" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/6.png' alt="Hyundai" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/7.png' alt="IBK" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/8.png' alt="ICHNP" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/9.png' alt="KITA" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/10.png' alt="KoreanRE" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/12.png' alt="Kotra" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/13.png' alt="KSure" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/kto.png' alt="KTO" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/14.png' alt="Kyobo" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/15.png' alt="Mirae" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/11.png' alt="Posco" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/samyang.png'alt="Samyang" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/16.png'alt="SK Life Science" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/solum.png'alt="solum" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/vatech.png'alt="vatech" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/woori.png'alt="woori" class="carousel-image">
+        <img src='https://raw.githubusercontent.com/echochs1/econo/refs/heads/main/Client%20Logos/Korea_Creative_Content_Agency_Hangul_logo.png'alt="temp KOCCA" class="carousel-image"> -->
+              <!-- <div class="carousel-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/agrofish.png' alt="Agrofish" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/csrenewables.png' alt="CS Renewables" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/dashingdiva.png' alt="Dashing Diva" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/ecopro.jpg' alt="Eco Pro" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/export.png' alt="Export" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/hitrons.png' alt="Hitrons" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/kb.png' alt="KB" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/kdb.png' alt="KDB" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/keb.png' alt="KEB" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/khf.jpg' alt="KHF" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/kic.jpg' alt="KIC" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/kiswire.jpg' alt="kiswire" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/kocham.png' alt="kocham" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/massdesign.png' alt="mass design" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/maxlite.png' alt="maxlite" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/myvet.png' alt="myvet" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/nonghyup.png' alt="nonghyup" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/nps.jpg' alt="nps" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/f9c89255c24a0f425bcb7653a3395a991c0ce2d8/logos/2/posid.svg' alt="posid" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/qpix.jfif' alt="Qpix" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/sempio.png' alt="sempio" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/shinhan.png' alt="shinhan" class="carousel-image-reverse">
+        <img src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/sojo.png' alt="sojo" class="carousel-image-reverse">
+      </div> -->
