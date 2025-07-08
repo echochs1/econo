@@ -1,0 +1,91 @@
+<style>
+  @keyframes ticker-kf {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      /* 10rem for each logo x 6 logos total = -60rem */
+      /* 11rem for each logo x 24  = */
+      transform: translateX(-264rem);
+    }
+  }
+
+  .img-ticker {
+    display: flex;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    animation-play-state: running;
+    animation: ticker-kf 35s linear infinite;
+
+  }
+
+  .img-ticker:hover {
+     animation-play-state: paused;
+  }
+
+  .tickerlogo {
+    width: 9rem;
+    flex: none;
+    margin: 0 1rem 0 1rem;
+    align-self: center;
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+
+<div style="pointer-events: none; position: relative; overflow: hidden; width: 100%; max-width: 1440px; justify-self: center; align-items: center;">
+    <div style="pointer-events: none; position: absolute; background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%); width: 150px; height:128px; z-index: 1; left: 0;"></div>
+    <div style="pointer-events: none; position: absolute; background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 1) 100%); width: 150px; height:128px; z-index: 1; right: 0;"></div>
+  <div class="img-ticker">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/accessbio.png' alt="Access Bio" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/1.png' alt="Bank of Korea" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/celltrion.png' alt="Celltrion" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2.png' alt="Financial Supervisory" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/3.png' alt="Fursys" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/4.png' alt="GMB" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/5.png' alt="Hiossen" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/6.png' alt="Hyundai" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/7.png' alt="IBK" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/8.png' alt="ICHNP" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/9.png' alt="KITA" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/10.png' alt="KoreanRE" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/12.png' alt="Kotra" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/13.png' alt="KSure" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/kto.png' alt="KTO" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/14.png' alt="Kyobo" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/15.png' alt="Mirae" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/11.png' alt="Posco" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/samyang.png'alt="Samyang" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/16.png'alt="SK Life Science" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/solum.png'alt="solum" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/vatech.png'alt="vatech" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/woori.png'alt="woori" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/echochs1/econo/refs/heads/main/Client%20Logos/Korea_Creative_Content_Agency_Hangul_logo.png'alt="temp KOCCA" width="144px" height="144px">
+
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/accessbio.png' alt="Access Bio" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/1.png' alt="Bank of Korea" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/celltrion.png' alt="Celltrion" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2.png' alt="Financial Supervisory" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/3.png' alt="Fursys" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/4.png' alt="GMB" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/5.png' alt="Hiossen" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/6.png' alt="Hyundai" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/7.png' alt="IBK" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/8.png' alt="ICHNP" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/9.png' alt="KITA" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/10.png' alt="KoreanRE" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/12.png' alt="Kotra" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/13.png' alt="KSure" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/kto.png' alt="KTO" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/14.png' alt="Kyobo" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/15.png' alt="Mirae" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/11.png' alt="Posco" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/samyang.png'alt="Samyang" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/16.png'alt="SK Life Science" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/solum.png'alt="solum" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/vatech.png'alt="vatech" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/moogchoi/econo/refs/heads/master/logos/2/woori.png'alt="woori" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src='https://raw.githubusercontent.com/echochs1/econo/refs/heads/main/Client%20Logos/Korea_Creative_Content_Agency_Hangul_logo.png'alt="temp KOCCA" width="144px" height="144px">
+  </div>
+</div>

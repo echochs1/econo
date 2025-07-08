@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<style>
+  .logo-ticker-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: 60px; /* adjust to fit your logos */
+  }
+
+  .logo-ticker-track {
+    display: flex;
+    white-space: nowrap;
+    will-change: transform;
+  }
+
+  .logo-ticker-track img {
+    height: 50px;
+    margin-right: 2rem;
+    flex-shrink: 0;
+  }
+</style>
+
+<div class="logo-ticker-container" id="logoTicker">
+  <div class="logo-ticker-track" id="tickerTrack">
+    <img src="/Partner Logos/Aetna.png" alt="">
+    <img src="/Partner Logos/Aflac.png" alt="">
+    <img src="/Partner Logos/Applied Underwriters Logo.png" alt="">
+    <img src="/Partner Logos/Chubb.jpg" alt="">
+    <img src="/Partner Logos/Attune Logo_v2.svg" alt="">
+    <img src="/Partner Logos/United Healthcare.png" alt="">
+   </div>
+</div>
+
+<script>
+  const container = document.getElementById('logoTicker');
+  const track = document.getElementById('tickerTrack');
+
+  // Clone logos to make it seamless
+  track.innerHTML += track.innerHTML;
+
+  let pos = 0;
+  const speed = 0.5; // pixels per frame
+  let paused = false;
+
+  function animate() {
+    if (!paused) {
+      pos -= speed;
+      // When entire first set has scrolled out, reset
+      if (Math.abs(pos) >= track.scrollWidth / 2) {
+        pos = 0;
+      }
+      track.style.transform = `translateX(${pos}px)`;
+    }
+    requestAnimationFrame(animate);
+  }
+
+  // Optional: Pause on hover
+  container.addEventListener('mouseenter', () => paused = true);
+  container.addEventListener('mouseleave', () => paused = false);
+
+  animate();
+</script>
+
+</body>
+</html>

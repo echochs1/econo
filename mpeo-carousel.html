@@ -1,0 +1,68 @@
+<style>
+  @keyframes ticker-kf {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      /* 10rem for each logo x 6 logos total = -60rem */
+      transform: translateX(-143rem);
+    }
+  }
+
+  .img-ticker {
+    display: flex;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    animation-play-state: running;
+    animation: ticker-kf 35s linear infinite;
+
+  }
+
+  .img-ticker:hover {
+     animation-play-state: paused;
+  }
+
+  .tickerlogo {
+    width: 9rem;
+    flex: none;
+    margin: 0 1rem 0 1rem;
+    align-self: center;
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+
+<div style="pointer-events: none; position: relative; overflow: hidden; width: 100%; max-width: 1440px; justify-self: center; align-items: center;">
+    <div style="pointer-events: none; position: absolute; background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%); width: 150px; height:128px; z-index: 1; left: 0;"></div>
+    <div style="pointer-events: none; position: absolute; background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 1) 100%); width: 150px; height:128px; z-index: 1; right: 0;"></div>
+  <div class="img-ticker">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/Rippling_288x288.webp" alt="Rippling PEO Logo" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/PrestigePEO_288x288.webp" alt="Prestige PEO Logo" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/Paychex_288x288.webp" alt="Paychex PEO Logo" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/Justworks_288x288.webp" alt="Justworks PEO Logo" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/ExtensisHR_288x288.webp" alt="ExtensisHR Logo" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/Deel_288x288.webp" alt="Deel PEO Logo" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/Engage_PEO_288x288.webp" alt="Engage PEO Logo" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/DecisionHR_288x288.webp" alt="DecisionHR Logo" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/ADP_288x288.webp" alt="ADP Logo" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/Emplova_288x288.webp" alt="Emplova PEO Logo" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/TriNet_288x288.webp" alt="TriNet PEO Logo" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/gna_288x288.webp" alt="G&A Partners PEO Logo" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/CoAdvantage_288x288.webp" alt="CoAdvantage PEO Logo" width="144px" height="144px">
+
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/Rippling_288x288.webp" alt="Rippling PEO Logo Repeated" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/PrestigePEO_288x288.webp" alt="Prestige PEO Logo Repeated" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/Paychex_288x288.webp" alt="Paychex PEO Logo Repeated" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/Justworks_288x288.webp" alt="Justworks PEO Logo Repeated" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/ExtensisHR_288x288.webp" alt="ExtensisHR Logo Repeated" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/Deel_288x288.webp" alt="Deel PEO Logo Repeated" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/Engage_PEO_288x288.webp" alt="Engage PEO Logo Repeated" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/DecisionHR_288x288.webp" alt="DecisionHR Logo Repeated" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/ADP_288x288.webp" alt="ADP Logo Repeated" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/Emplova_288x288.webp" alt="Emplova PEO Logo Repeated" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/TriNet_288x288.webp" alt="TriNet PEO Logo Repeated" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/gna_288x288.webp" alt="G&A Partners PEO Logo Repeated" width="144px" height="144px">
+    <img class="tickerlogo" loading="lazy" src="https://masterpeo.com/wp-content/uploads/2025/06/CoAdvantage_288x288.webp" alt="CoAdvantage PEO Logo Repeated" width="144px" height="144px">
+  </div>
+</div>

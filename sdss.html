@@ -1,0 +1,63 @@
+<style>
+  @keyframes ticker-kf {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      /* 10rem for each logo x 6 logos total = -60rem */
+      transform: translateX(-60rem);
+    }
+  }
+
+  .img-ticker {
+    display: flex;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    animation: ticker-kf 10s linear infinite;
+  }
+
+  .tickerlogo {
+    width: 8rem;
+    flex: none;
+    margin: 0 1rem 0 1rem;
+    align-self: flex-start;
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+
+<!-- Wrap the slider in div with overflow hidden to hide scrollbars -->
+<div style="overflow: hidden; width: 100%;">
+
+  <!-- The slider itself is a flex grid -->
+  <div class="img-ticker">
+
+    <!-- Original set of images. Logo images credits to https://github.com/solodev/infinite-logo-carousel/ -->
+    <!-- Each image is a grid column with width 8rem and horiztonal margin 2rem = 10rem -->
+    <img class="tickerlogo" src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image1.png">
+    <img class="tickerlogo" src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image2.png">
+    <img class="tickerlogo" src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image3.png">
+    <img class="tickerlogo" src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image4.png">
+    <img class="tickerlogo" src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image5.png">
+    <img class="tickerlogo" src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image6.png">
+
+    <!-- 2nd copy set of images -->
+    <img class="tickerlogo" src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image1.png">
+    <img class="tickerlogo" src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image2.png">
+    <img class="tickerlogo" src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image3.png">
+    <img class="tickerlogo" src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image4.png">
+    <img class="tickerlogo" src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image5.png">
+    <img class="tickerlogo" src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image6.png">
+    
+    
+    <!-- 3rd copy set of images -->
+    <img class="tickerlogo" src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image1.png">
+    <img class="tickerlogo" src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image2.png">
+    <img class="tickerlogo" src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image3.png">
+    <img class="tickerlogo" src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image4.png">
+    <img class="tickerlogo" src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image5.png">
+    <img class="tickerlogo" src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image6.png">
+
+  </div>
+</div>

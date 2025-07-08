@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    .body {
+      margin: 0;
+    }
+
+    .gudea-regular {
+      font-family: "Gudea", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .section {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+      justify-content: center;
+    }
+
+    .carousel {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .carousel.sliding-transition {
+      transition: transform 0.5s ease-in-out;
+    }
+
+    div.review-card {
+      min-width: 240px;
+      max-width: 300px;
+      justify-items: center;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h3.five-star-header {
+      color: #fcbe0c;
+      font-size: 40px;
+      margin: 0;
+    }
+
+    p.review-text {
+      margin: 8px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="carousel-container gudea-regular">
+      <div class="carousel">
+        <div class="review-card">
+          <h3 class="five-star-header">★★★★★</h3>
+          <p class="review-text">
+            "What truly stood out was the professionalism, patience, and genuine 
+            commitment to finding the best coverage for my specific needs. Beyond just 
+            providing great service, [Econo Agency] was proactive in finding ways to save me money 
+            while maintaining excellent coverage.""
+          </p>
+          <p>Jane</p>
+        </div>
+        <div class="review-card">
+          <h3 class="five-star-header">★★★★★</h3>
+          <p class="review-text">
+            "I have 2 businesses and Mr. Sean helped me to get the policy replaced.
+            He is very attentive and knowledgeable on all business insurance matters.
+            Nothing but great things to say about this business and how much he helped me.
+            I hope other people can benefit from reading this review.""
+          </p>
+          <p>Mi C</p>
+        </div>
+        <div class="review-card">
+          <h3 class="five-star-header">★★★★★</h3>
+          <p class="review-text">
+            "When it came time to find a new policy, I reached out to Econo Agency and the correspondence was again smooth,
+            clear and simple. Not only did Econo Agency find a policy that provided
+            more coverage for the new home, but it came at a lower price than competitors'
+            auto-generated policies."
+          </p>
+          <p>CM L</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+<script>
+  let intervalID;
+  let timeoutID;
+
+  const container = document.querySelector(".carousel-container");
+  const carousel = document.querySelector(".carousel");
+  const cards = document.querySelectorAll(".review-card");
+  const cw = document.querySelector(".review-text")
+  const totalCards = Object.keys(cards).length;
+  
+  let gap = carousel.offsetWidth / 3;
+  let cardWidth = cw.offsetWidth
+  let translation;
+
+  function checkMedia(media) {
+    if (media == false) {
+      if (intervalID) clearInterval(intervalID);
+      if (timeoutID) clearTimeout(timeoutID);
+
+      gap = carousel.offsetWidth / 2;
+      cardWidth = cw.offsetWidth;
+      translation = cardWidth + gap;
+
+      carousel.style.gap = gap + 'px';
+
+      let currentIndex = 0;
+      let prevIndex;
+
+      intervalID = setInterval(() => {
+        carousel.classList.add("sliding-transition");
+        prevIndex = currentIndex;
+        currentIndex = (currentIndex + 1) % totalCards;
+        carousel.style.transform = `translateX(-${translation}px)`;
+
+        timeoutID = setTimeout(() => {
+          carousel.appendChild(cards[prevIndex]);
+          carousel.classList.remove("sliding-transition");
+          carousel.style.transform = "";
+        }, 1500);
+      }, 3000);
+    } 
+    else {
+      if (intervalID) clearInterval(intervalID);
+      if (timeoutID) clearTimeout(timeoutID);
+        carousel.style = {'display': 'flex', 'justify-content': 'center'};
+        gap = (carousel.offsetWidth - (cardWidth * 3)) / 4;
+        carousel.style.gap = gap + 'px';
+    }
+  }
+
+  checkMedia(carousel.offsetWidth > 900);
+  checkMedia(carousel.offsetWidth > 900);
+  screen.orientation.addEventListener("change", function (e) {
+    console.log('orientation check triggered')
+    const orientation = screen.orientation.type;
+    if (orientation.startsWith('portrait')) {
+      // Device is in portrait mode
+      setTimeout(() => {
+        checkMedia(carousel.offsetWidth > 900)
+      }, 25)
+    } else {
+      // Device is in landscape mode
+      setTimeout(() => {
+        checkMedia(carousel.offsetWidth > 900)
+      }, 25)
+    }
+  });
+</script>
+
+</html>
